@@ -26,15 +26,200 @@
     font-style: bold;
 }
 
-body{
-    height: 100%;
-    margin: 0;
-    padding: 0;
+:root{
+  --first-color: #ffabe1;
+  --first-color-dark: #ff6bff;
+  --first-color-light: #A49EAC;
+  --first-color-lighten: #F2F2F2;
+
+  --body-font-regular: 'IBMPlexSansThai-Regular';
+  --body-font-medium: 'IBMPlexSansThai-Medium';
+  --body-font-bold: 'IBMPlexSansThai-Bold';
+  --h1-font-size: 1.5rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
 }
-  
+
+@media screen and (min-width: 768px){
+  :root{
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+  }
+}
+
 .bg {
+  /* The image used */
+  background-image: url("../img/bg-desktop.png");
+
+  /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+*,::before,::after{
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  color: var(--first-color-dark);
+}
+
+h1{
+  margin: 0;
+}
+
+a{
+  text-decoration: none;
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+.login{
+  display: grid;
+  grid-template-columns: 100%;
+  height: 100vh;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.login__content{
+  display: grid;
+}
+
+.login__img{
+  justify-self: center;
+}
+
+.login__img img{
+  width: 310px;
+  margin-top: 1.5rem;
+}
+
+.login__forms{
+  position: relative;
+  height: 368px;
+}
+
+.login__registre, .login__create{
+  position: absolute;
+  bottom: -1rem;
+  width: 100%;
+  background-color: var(--first-color-lighten);
+  padding: 2rem 1rem;
+  border-radius: 1rem;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(35,0,77,.2);
+  animation-duration: .4s;
+  animation-name: animate-login;
+}
+
+@keyframes animate-login{
+  0%{
+    transform: scale(1,1);
+  }
+  50%{
+    transform: scale(1.1,1.1);
+  }
+  100%{
+    transform: scale(1,1);
+  }
+}
+
+.login__title{
+  font-family: var(--body-font-bold);
+  font-size: var(--h1-font-size);
+  margin-bottom: 2rem;
+}
+
+.login__box{
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  column-gap: .5rem;
+  padding: 1.125rem 1rem;
+  background-color: #FFF;
+  margin-top: 1rem;
+  border-radius: .5rem;
+}
+
+.login__icon{
+  font-size: 1.5rem;
+  color: var(--first-color);
+}
+
+.login__input{
+  border: none;
+  outline: none;
+  font-family: var(--body-font-regular);
+  font-size: var(--normal-font-size);
+  font-weight: 700;
+  color: var(--first-color);
+}
+
+.login__input::placeholder{
+  font-size: var(--normal-font-size);
+  font-family: var(--body-font-regular);
+  color: var(--first-color-light);
+}
+
+.login__button{
+  display: block;
+  padding: 1rem;
+  margin: 2rem 0;
+  background: rgb(255,230,230);
+  background: linear-gradient(90deg, rgba(255,230,230,1) 0%, rgba(255,171,225,1) 40%, rgba(166,133,226,1) 80%, rgba(80,188,236,1) 100%);
+  color: #FFF;
+  font-family: var(--body-font-bold);
+  font-size: 25px;
+  text-align: center;
+  border-radius: .5rem;
+  transition: .3s;
+}
+
+.login__button:hover{
+  background-color: var(--first-color-dark);
+}
+
+.login__account, .login__signin, .login__signup{
+  font-family: var(--body-font-medium);
+  font-weight: 600;
+  font-size: var(--small-font-size);
+}
+
+.login__account{
+  color: #000;
+}
+
+.login__signin, .login__signup{
+  color: var(--first-color);
+  cursor: pointer;
+}
+
+.block{
+  display: block;
+}
+
+.none{
+  display: none;
+}
+
+/* ปวดหัวกับฟังก์ชั่น Media แก้ทั้งชาติ บัคจุดเดียว */
+@media (max-width: 414px){
+  .bg {
     /* The image used */
-    background-image: url("../img/bg-desktop.png");
+    background-image: url("../img/bg-mobile2.png");
   
     /* Full height */
     height: 100%; 
@@ -43,266 +228,91 @@ body{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+  }
 }
 
-:root{
-    --first-color: palevioletred;
-    --first-color-dark: rgb(0, 0, 0);
-    --first-color-light: rgb(189, 189, 189);
-    --first-color-lighten: #F2F2F2;
+@media screen and (min-width: 300px){
+  .login__forms{
+    width: 340px;
+    justify-self: center;
+  }
 
-    --body-font-Regular: 'IBMPlexSansThai-Regular';
-    --body-font-Medium: 'IBMPlexSansThai-Medium';
-    --body-font-Bold: 'IBMPlexSansThai-Bold';
-    --h1-font-size: 1.5rem;
-    --normal-font-size: .938rem;
-    --small-font-size: .813rem;
+  .login__create{
+    bottom: -22rem;
+  }
 }
 
-@media screen and (min-width: 768px){
-    :root{
-        --normal-font-size: .938rem;
-        --small-font-size: .875rem;
-    }
+@media screen and (min-width: 500px){
+  .login__forms{
+    width: 348px;
+    justify-self: center;
+  }
+
+  .login__create{
+    bottom: -22rem;
+  }
 }
 
-*,::before,::after {
-    box-sizing: border-box;
+@media screen and (min-width: 576px){
+  .login__forms{
+    width: 348px;
+    justify-self: center;
+  }
+
+  .login__create{
+    bottom: -22rem;
+  }
 }
 
-a{
-    text-decoration: none;
-}
-
-img{
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
-
-.login{
-    display: grid;
-    grid-template-columns: 100%;
+@media screen and (min-width: 1024px){
+  .login{
     height: 100vh;
-    margin-left: 1.5rem;
-    margin-right: 1.5rem;
-}
+    overflow: hidden;
+  }
 
-.login_content{
-    display: grid;   
-}
-
-.login_img{
+  .login__content{
+    grid-template-columns: repeat(2, max-content);
     justify-content: center;
-}
+    align-items: center;
+    margin-left: 10rem;
+  }
 
-.login_img img{
-    width: 310px;
-    margin-top: 8rem;
-}
-
-.login_forms{
-    position: relative;
-    height: 368px;
-}
-
-.login_register, .login_create{
-    position: absolute;
-    bottom: 1rem;
-    font-family: var(--body-font-Regular);
-    width: 100%;
-    background-color: var(--first-color-lighten);
-    padding: 2rem 1rem;
+  .login__img{
+    display: flex;
+    width: 600px;
+    height: 588px;
     border-radius: 1rem;
-    text-align: center;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-    animation-duration: .4s;
-    animation-name: animate-login;
+    padding-left: 1rem;
+  }
+
+  .login__img img{
+    width: 390px;
+    height: 300px;
+    margin-top: 120px;
+  }
+
+  .login__registre, .login__create{
+    left: -11rem;
+  }
+
+  .login__registre{
+    bottom: -2rem;
+  }
+
+  .login__create{
+    bottom: -13.8rem;
+  }
 }
 
-@keyframes animate-login{
-    0%{
-        transform: scale(1,1);
-    }50%{
-        transform: scale(1.1,1.1);
-    }100%{
-        transform: scale(1,1);
-    }
-    
+.form-check-label{
+  font-family: var(--body-font-medium);
+  font-size: var(--body-font-medium);
 }
 
-.login_title{
-    font-family: var(--body-font-Bold);
-    font-size: var(--h1-font-size);
-    margin-bottom: 2rem;
+.modal-title{
+  font-family: var(--body-font-bold);
 }
 
-.login_box{
-    display: grid;
-    grid-template-columns: max-content 1fr;
-    column-gap: .5rem;
-    padding: 1.125rem 1rem;
-    background-color: #FFF;
-    margin-top: 1rem;
-    border-radius: .5rem;
+.detailtext{
+  font-family: var(--body-font-medium);
 }
-
-.login_icons{
-    font-size: 1.5rem;
-    color: var(--first-color);
-}
-
-.login_input{
-    border: none;
-    outline: none;
-    font-size: var(--body-font-Medium);
-    font-weight: 700;
-    color: var(--first-color-dark);
-}
-
-.login_input::placeholder{
-    font-family: var(--body-font-Regular);
-    font-size: var(--normal-font-size);
-    color: var(--first-color-light);
-}
-
-.form-check{
-    display: block;
-    width: max-content;
-    margin-right: auto;
-    margin-top: .5rem;
-    font-size: var(--small-font-size);
-    font-weight: 600;
-    color: var(--first-color-light);
-}
-
-.login_button{
-    display: block;
-    padding: 1rem;
-    margin: 2rem 0;
-    background: rgb(255,230,230);
-    background: linear-gradient(90deg, rgba(255,230,230,1) 0%, rgba(255,171,225,1) 40%, rgba(166,133,226,1) 80%, rgba(80,188,236,1) 100%);
-    color: #FFF;
-    font-weight: 600;
-    text-align: center;
-    border-radius: .5rem;
-    transition: .3s;
-}
-
-.login_button:hover{
-    background-color: var(--first-color);
-}
-
-.login_account, .login_signin, .login_signup{
-    font-family: var(--body-font-Medium);
-    font-weight: 600;
-    font-size: var(--small-font-size);
-}
-
-.login_account{
-    color: var(--first-color-dark);
-}
-
-.login_signup, .login_signin{
-    color: var(--first-color);
-    cursor: pointer;
-}
-
-.block{
-    display: block;
-}
-
-.none{
-    display: none;
-}
-
-/* ปวดหัวกับฟังก์ชั่น Media แก้ทั้งชาติ บัคจุดเดียว */
-@media screen and (max-width: 576px) {
-    .login_img {
-        display: none;
-    }
-
-    .bg {
-        /* The image used */
-        background-image: url("../img/bg-mobile.png");
-      
-        /* Full height */
-        height: 100%; 
-      
-        /* Center and scale the image nicely */
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-
-    .login_register{
-        margin-bottom: -135px;
-    }
-
-    .login_create {
-        margin-bottom: -200px;
-    }
-}
-
-@media screen and (min-width: 576px) {
-    .login_forms {
-        width: 548px;
-        justify-content: center;
-    }
-}
-
-@media screen and (min-width: 1024px) {
-    .login{
-        height: 100vh;
-        overflow: hidden;
-    }
-
-    .login_content {
-        grid-template-columns: repeat(2, max-content);
-        justify-content: center;
-        align-items: center;
-        margin-left: -10rem;
-    }
-
-    .login_img {
-        display: flex;
-        width: 600px;
-        height: 300px;
-        border-radius: 1rem;
-        padding-left: 1rem;
-        margin-right: 450px;
-        margin-top: 250px;
-    }
-
-    .login_img img{
-        width: 390px;
-        margin-top: 0;
-    }
-
-    .login_register, .login_create{
-        left: -11rem;
-    }
-
-    .login_register {
-        margin-bottom: 300px;
-        margin-left: 850px;
-        bottom: -2rem;
-    }
-
-    .login_create{
-        margin-bottom: 250px;
-        margin-left: 850px;
-        bottom: -5.5rem;
-    }
-}
-
-.ht-1 {
-    font-family: var(--body-font-Bold);
-    color: rgb(0, 0, 0);
-}
-
-
-
-
-
-
