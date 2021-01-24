@@ -20,123 +20,143 @@
 </head>
 <body>
 
-    <!-- เงื่อนไข -->
-    <div class="modal fade" id="modalde" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">เงื่อนไขการใช้งาน</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-
+     <!-- เงื่อนไข -->
+        <div class="modal fade" id="modalde" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">เงื่อนไขการใช้งาน</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p class="text-center detailtext">-- รอข้อมูล --</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="bg">
-        <div class="login">
-            <div class="login_content">
-                <div class="login_img">
-                    <img src="assets/img/All logo.png" alt="logo">
+        <div class="bg">
+            <div class="login">
+                <div class="login__content">
+                    <div class="login__img">
+                        <img src="assets/img/All logo.png" alt="">
+                    </div>
+    
+                    <div class="login__forms">
+                        <form action="" class="login__registre" id="login-in">
+                            <h1 class="login__title">เข้าสู่ระบบ | Login</h1>
+        
+                            <div class="login__box">
+                                <i class='bx bx-user login__icon'></i>
+                                <input type="text" name="username" class="login__input" placeholder="ชื่อผู้ใช้งาน">
+                            </div>
+        
+                            <div class="login__box">
+                                <i class='bx bx-lock-alt login__icon'></i>
+                                <input type="password" name="password" class="login__input" placeholder="รหัสผ่าน">
+                            </div>
+
+                            <div class="form-check my-2">
+                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                <a class="form-check-label" for="exampleCheck1" data-toggle="modal" data-target="#modalde">ข้อกำหนดและเงื่อนไข</a>
+                            </div>
+    
+                            <a href="#" class="login__button" style="text-decoration: none; color: #FFF;">เข้าสู่ระบบ</a>
+    
+                            <div>
+                                <span class="login__account">คุณยังไม่ได้สมัครการใช้งาน?</span>
+                                <span class="login__signin" id="sign-up">สมัครใช้งาน</span>
+                            </div>
+                        </form>
+    
+                        <form action="" class="login__create none" id="login-up">
+                            <h1 class="login__title">ลงทะเบียนเข้าใช้งาน | Register</h1>
+        
+                            <div class="login__box">
+                                <i class='bx bxs-user-account login__icon'></i>
+                                <input type="text" name="" class="login__input" placeholder="ชื่อ-นามสกุล">
+                            </div>
+        
+                            <div class="login__box">
+                                <i class='bx bx-id-card login__icon'></i>
+                                <input type="text" name="" class="login__input" placeholder="เลขบัตรประจำตัวประชาชน" maxlength="17" onkeyup="autoTab2(this,1)">
+                            </div>
+    
+                            <div class="login__box">
+                                <i class='bx bx-calendar login__icon'></i>
+                                <input type="text" name="" data-provide="datepicker" data-date-language="th-th" class="login__input" placeholder="วัน/เดือน/ปีเกิด">
+                            </div>
+
+                            <div class="login__box">
+                                <i class='bx bxs-phone login__icon'></i>
+                                <input type="text" name="" class="login__input" placeholder="เบอร์โทรศัพท์" maxlength="11" onkeyup="autoTab2(this,2)">
+                            </div>
+        
+                            <div class="login__box">
+                                <i class='bx bx-at login__icon'></i>
+                                <input type="text" name="" class="login__input" placeholder="อีเมลล์">
+                            </div>
+        
+                            <div class="login__box">
+                                <i class='bx bx-user login__icon'></i>
+                                <input type="text" name="" class="login__input" placeholder="ชื่อผู้ใช้งาน">
+                            </div>
+        
+                            <div class="login__box">
+                                <i class='bx bx-lock-alt login__icon'></i>
+                                <input type="password" name="" class="login__input" placeholder="รหัสผ่าน">
+                            </div>
+    
+                            <a href="#" class="login__button" style="text-decoration: none; color: #FFF;">ลงทะเบียนเข้าใช้งาน</a>
+    
+                            <div>
+                                <span class="login__account">คุณได้ทำการลงทะเบียนแล้ว?</span>
+                                <span class="login__signup" id="sign-in">เข้าสู่ระบบ</span>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
-
-            <div class="login_forms">
-                <form action="" method="POST" class="login_register" id="login-in">
-                    <h1 class="login_title">เข้าสู่ระบบ</h1>
-
-                    <div class="login_box">
-                        <i class='bx bx-user login_icons'></i>
-                        <input type="text" placeholder="ชื่อผู้ใช้งาน" class="login_input">
-                    </div>
-
-                    <div class="login_box">
-                        <i class='bx bx-lock login_icons'></i>
-                        <input type="password" placeholder="รหัสผ่าน" class="login_input">
-                    </div>
-
-                    <div class="form-check">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                        <a class="form-check-label" for="exampleCheck1" data-toggle="modal" data-target="#modalde">เงื่อนไขการใช้งาน</a>
-                    </div>
-
-                    <a href="#"class="login_button" name="submit" id="submit" disabled="disabled" style="text-decoration: none;">เข้าสู่ระบบ</a>
-
-                    <div>
-                        <span class="login_account">คุณยังไม่ได้สมัครการใช้งาน?</span>
-                        <span class="login_signin" id="sign-up">สมัครใช้งาน</span>
-                    </div>
-                </form>
-
-                <form action="" method="POST" class="login_create none" id="login-up">
-                    <h1 class="login_title">สมัครใช้งาน</h1>
-
-                    <div class="login_box">
-                        <i class='bx bxs-user-account login_icons'></i>
-                        <input type="text" placeholder="ชื่อ-นามสกุล" class="login_input">
-                    </div>
-
-                    <div class="login_box">
-                        <i class='bx bx-id-card login_icons'></i>
-                        <input type="text" placeholder="เลขบัตรประจำตัวประชาชน" class="login_input">
-                    </div>
-                    
-                    <div class="login_box">
-                        <i class='bx bx-calendar login_icons'></i>
-                        <input type="text" placeholder="วัน/เดือน/ปีเกิด" data-provide="datepicker" data-date-language="th-th" class="login_input">
-                    </div>
-
-                    <div class="login_box">
-                        <i class='bx bxs-phone login_icons'></i>
-                        <input type="text" placeholder="เบอร์โทรศัพท์" class="login_input">
-                    </div>
-
-                    <div class="login_box">
-                        <i class='bx bx-at login_icons'></i>
-                        <input type="text" placeholder="อีเมล" class="login_input">
-                    </div>
-
-                    <div class="login_box">
-                        <i class='bx bx-user login_icons'></i>
-                        <input type="text" placeholder="ชื่อผู้ใช้งาน" class="login_input">
-                    </div>
-
-                    <div class="login_box">
-                        <i class='bx bx-lock-alt login_icons'></i>
-                        <input type="password" placeholder="รหัสผ่าน" class="login_input">
-                    </div>
-
-                    <a href="#" class="login_button" style="text-decoration: none;">ลงทะเบียน</a>
-
-                    <div>
-                        <span class="login_account">คุณได้สมัครแล้ว?</span>
-                        <span class="login_signup" id="sign-in">เข้าสู่ระบบ</span>
-                    </div>
-
-                </form>
-            </div>
         </div>
-    </div>
 
         <!--       _
         .__(.)< (MEOWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW)
             \___)   
-    ~~~~~~~~~~~~~~~~~~-->
+        ~~~~~~~~~~~~~~~~~~-->
 
-    
+        <script src="assets/js/main.js"></script>
 
-    <script src="assets/js/main.js"></script>
-    
-    <script>
-        function demo() {
-            $('.datepicker').datepicker();
-        }
-    </script>
+        <script>
+            function demo() {
+                $('.datepicker').datepicker();
+            }
+        </script>
 
+        <script type="text/javascript">
+            function autoTab2(obj,typeCheck){
+                    if(typeCheck==1){
+                        var pattern=new String("_-____-_____-_-__"); // กำหนดรูปแบบในนี้
+                        var pattern_ex=new String("-"); // กำหนดสัญลักษณ์หรือเครื่องหมายที่ใช้แบ่งในนี้     
+                    }else{
+                        var pattern=new String("___-_______"); // กำหนดรูปแบบในนี้
+                        var pattern_ex=new String("-"); // กำหนดสัญลักษณ์หรือเครื่องหมายที่ใช้แบ่งในนี้                 
+                    }
+                    var returnText=new String("");
+                    var obj_l=obj.value.length;
+                    var obj_l2=obj_l-1;
+                    for(i=0;i<pattern.length;i++){           
+                        if(obj_l2==i && pattern.charAt(i+1)==pattern_ex){
+                            returnText+=obj.value+pattern_ex;
+                            obj.value=returnText;
+                        }
+                    }
+                    if(obj_l>=pattern.length){
+                        obj.value=obj.value.substr(0,pattern.length);           
+                    }
+            }
+        </script>
 
 </body>
 </html>
