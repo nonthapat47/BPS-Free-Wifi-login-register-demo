@@ -6,13 +6,35 @@
     <title>BPS Free WiFi</title>
     <link rel="icon" href="assets/img/iconweb.png">
     <link rel="stylesheet" href="assets/css/theme.css">
-    <link rel="stylesheet" href="assets/node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="assets/css/theme.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        html, body {
+            height: 100%;
+        }
 
-    <script src="assets/node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="assets/node_modules/jquery/dist/jquery.slim.min.js"></script>
-    <script src="assets/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="assets/node_modules/popper.js/dist/umd/popper.min.js"></script>
+        img{
+            display: inline;
+        }
+
+        .bg {
+            /* The image used */
+            background-image: url("assets/img/bg-desktop.png");
+
+            /* Full height */
+            height: 100%; 
+
+            /* Center and scale the image nicely */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -33,10 +55,18 @@
         </div>
     </div>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-12 text-center ht-1" style="margin-top: 350px;">
-                <h1>เข้าสู่ระบบเรียบร้อยแล้ว!</h1>
+    <div class="bg">
+        <div class="container container h-100 d-flex justify-content-center">
+            <div class="row my-auto">
+                <div class="col-12 mx-auto mb-4 text-center">
+                    <img src="assets/img/All logo.png" width="300px" height="250px" alt="">
+                </div>
+                <div class="col-12 mx-auto mb-3 text-center">
+                    <h2 class="wel">ยินดีต้อนรับสู่บริการ BPS Free WiFi</h2>
+                </div>
+                <div class="col-12 mx-auto text-center">
+                    <a type="button" href="#" class="btn btn-primary donebtn">เข้าใช้งาน</a>
+                </div>
             </div>
         </div>
     </div>
