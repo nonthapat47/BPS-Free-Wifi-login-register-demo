@@ -316,3 +316,11 @@ img{
 .detailtext{
   font-family: var(--body-font-medium);
 }
+
+.wel {
+  font-family: var(--body-font-bold);
+}
+
+.donebtn {
+  font-family: var(--body-font-bold);
+}
