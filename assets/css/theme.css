@@ -105,7 +105,7 @@ img{
 
 .login__img img{
   width: 310px;
-  margin-top: 1.5rem;
+  margin-top: 3.5rem;
 }
 
 .login__forms{
@@ -238,7 +238,7 @@ img{
   }
 
   .login__create{
-    bottom: -25rem;
+    bottom: -20rem;
   }
 }
 
@@ -249,7 +249,7 @@ img{
   }
 
   .login__create{
-    bottom: -22rem;
+    bottom: -20rem;
   }
 }
 
@@ -260,7 +260,7 @@ img{
   }
 
   .login__create{
-    bottom: -22rem;
+    bottom: -20rem;
   }
 }
 
